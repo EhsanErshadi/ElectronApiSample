@@ -9,7 +9,25 @@ App.on('ready', _ => {
 
     var template = [
         {
-            label: "ddd",
+            label: App.getName(),
+            submenu: [
+                {
+                    label: "About",
+                    click: _ => {
+                        console.log('hi');
+                    }
+                },
+                {
+                    type: 'separator',
+                },
+                {
+                    label: 'Quit',
+                    accelerator: "CommandOrControl+Q",
+                    click: e => {
+                        App.quit();                        
+                    }
+                }
+            ],
         }
     ];
 
