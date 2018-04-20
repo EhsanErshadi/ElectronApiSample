@@ -2,9 +2,9 @@
   "name": "electronapisample",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "electron ."
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/EhsanErshadi/ElectronApiSample/issues"
   },
-  "homepage": "https://github.com/EhsanErshadi/ElectronApiSample#readme"
+  "homepage": "https://github.com/EhsanErshadi/ElectronApiSample#readme",
+  "dependencies": {
+    "electron": "^1.8.4"
+  }
 }
