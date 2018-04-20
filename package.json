@@ -1,0 +1,19 @@
+{
+  "name": "electronapisample",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EhsanErshadi/ElectronApiSample.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EhsanErshadi/ElectronApiSample/issues"
+  },
+  "homepage": "https://github.com/EhsanErshadi/ElectronApiSample#readme"
+}
