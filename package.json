@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/EhsanErshadi/ElectronApiSample#readme",
   "dependencies": {
-    "electron": "^1.8.4"
+    "electron": "^1.8.4",
+    "uuid": "^3.2.1"
   }
 }
