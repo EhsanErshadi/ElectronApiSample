@@ -1,15 +1,16 @@
-var Electron = require('electron');
-var App = Electron.app;
-var Win = Electron.BrowserWindow;
-var Menu = Electron.Menu;
+const { electron, app, globalShortcut, BrowserWindow, Tray, Menu } = require('electron')
+const path = require('path');
 
+app.on('ready', _ => {
+    new BrowserWindow();
 
-App.on('ready', _ => {
-    new Win();
+    globalShortcut.register('CommandOrControl+Q', () => {
+        app.quit();
+    })
 
     var template = [
         {
-            label: App.getName(),
+            label: app.getName(),
             submenu: [
                 {
                     label: "About",
@@ -24,7 +25,7 @@ App.on('ready', _ => {
                     label: 'Quit',
                     accelerator: "CommandOrControl+Q",
                     click: e => {
-                        App.quit();                        
+                        app.quit();
                     }
                 }
             ],
@@ -33,4 +34,14 @@ App.on('ready', _ => {
 
     var menu = Menu.buildFromTemplate(template);
     Menu.setApplicationMenu(menu);
+
+
+    var tray = new Tray(path.join('assets/image', 'app-512.png'));
+    var trayMenu = Menu.buildFromTemplate([
+        {
+            label: 'Wow',
+            click: e => { console.log('hi') }
+        }
+    ]);
+    tray.setContextMenu(trayMenu);
 });
