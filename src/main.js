@@ -63,6 +63,6 @@ function GenerateGuid() {
 
     tray.displayBalloon({
         title: 'Guid is in clipboard',
-        content: guid
+         content: guid
     });
 }
